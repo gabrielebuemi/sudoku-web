@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- angularJs -->
+<script src="angular/angular.min.js"></script>
+
+<!-- app config -->
+<script type="text/javascript" src="conf/sudokuApp.js"></script>
+
+<!-- directives -->
+<script type="text/javascript" src="directive/sudoku-directive.js"></script>
+
+<!-- services -->
+<script type="text/javascript" src="services/sudoku-service.js"></script>
+
+<!-- controllers -->
+<script type="text/javascript" src="controller/sudoku-controller.js"></script>
+
+<title>Sudoku Challenge</title>
+
+<link rel="stylesheet" href="css/sudoku.css">
+
+</head>
+<body ng-app="SudokuApp" ng-controller="SudokuController">
+	
+	<div align="center">
+		<h1>sudoku-web</h1>
+	</div>
+
+	<br />
+	
+	<form>
+		<table class="sudoku-tab">
+			<tr ng-repeat="righe in griglia">
+				<td ng-repeat="colonne in righe">
+					<input type="text" size="1"
+						maxlength="1" ng-if="colonne.daSettare"
+						ng-model="colonne.valore"  ng-click="rimuoviErrori($parent.$parent.$index, $parent.$index)"
+						ng-class="{'daSettare': colonne.corretto, 'errati': !colonne.corretto } " is-valid-number-sudoku /> 
+						
+					<input type="text" size="1" maxlength="1" readonly="readonly"
+						class="settati" ng-if="!colonne.daSettare"
+						ng-model="colonne.valore" />
+				</td>
+			<tr>
+		</table>
+		
+		<br />
+
+		<div align="center">
+			<table>
+				<tr>
+					<td>
+						<button type="button" class="blue-button"
+							ng-click="submitGriglia()">Verifica</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>
+
+					<td>
+						<button type="button" class="red-button"
+							ng-click="ripristinaGriglia()">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>
+
+					<td>
+						<button type="button" class="green-button"
+							ng-click="mostraSoluzione()">Mostra Soluzione</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>
