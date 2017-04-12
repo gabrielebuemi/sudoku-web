@@ -1,0 +1,94 @@
+.md-button {
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
+  min-width: 88px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration:none;
+  border: none;
+  outline: none;
+}
+
+.blue-button {
+	background: #25A6E1;
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',
+		endColorstr='#188BC0', GradientType=0);
+	padding: 3px 5px;
+	color: #fff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 12px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #1A87B9
+}
+
+.red-button {
+	background: #CD5C5C;
+	padding: 3px 5px;
+	color: #fff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 12px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #CD5C5C
+}
+
+.green-button {
+	background: #5CCD5C;
+	padding: 3px 5px;
+	color:  #fff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 12px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #5CCD5C
+}
+
+.sudoku-tab {
+  margin:1em auto;
+}
+.sudoku-tab td {
+  height:30px;
+  width:30px;
+  border:1px solid;
+  text-align:center;
+}
+.sudoku-tab td:first-child {
+  border-left:solid;
+}
+.sudoku-tab td:nth-child(3n) {
+  border-right:solid ;
+}
+.sudoku-tab tr:first-child td {
+  border-top:solid;
+}
+.sudoku-tab tr:nth-child(3n) td {
+  border-bottom:solid ;
+}
+input.daSettare {
+    background-color:transparent;
+    border: 0px solid;
+    text-align: center;   
+}
+input.settati {
+    background-color:transparent;
+    border: 0px solid;
+    text-align: center;  
+    font-weight: bold;
+}
+input.errati {
+    background-color:#F5A9A9;
+    border: 0px solid;
+    text-align: center; 
+    height:28px;
+    width:28px;
+}
+input:focus {
+    outline:none;
+}
+
